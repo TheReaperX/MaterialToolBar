@@ -1,5 +1,6 @@
 package com.navdesigns.outlaw.materialtoolbar;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -41,7 +42,9 @@ public class MainActivity extends ActionBarActivity {
         if (id == R.id.action_settings) {
             return true;
         }
-
+        if(id == R.id.navigate){
+            startActivity(new Intent(this,SubActivity.class));
+        }
         return super.onOptionsItemSelected(item);
     }
 }
